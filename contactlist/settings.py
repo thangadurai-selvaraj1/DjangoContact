@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(d#)_sx_fvh8zm)gu-^39z%^=ludrb@s1jbmr^rdxt3x*q7#)c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alvincontactlist.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
