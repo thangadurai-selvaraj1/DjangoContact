@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication',
     'contact',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'contactlist.urls'
@@ -130,3 +132,8 @@ JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8000"
+]
